@@ -1,0 +1,25 @@
+#!/usr/bin/env python 3
+# -*- coding: utf-8 -*-
+
+import math
+import sys
+
+# Вариант 8
+EPS = 1e-10
+
+if __name__ == '__main__':
+    x = float(input("Введите x: "))
+    if x == 0:
+        print("x - не может быть равен 0", file=sys.stderr)
+        exit(1)
+
+    a = -x ** 3 / 3
+    S, n = a, 0
+
+    while math.fabs(a) > EPS:
+        a *= (x * (2 * n + 1)) / (2 * (x ** (2 * n)))
+        S += a
+        n += 1
+
+    print(f"Chi{x} = {2 / math.sqrt(math.pi) *  S}")
+
