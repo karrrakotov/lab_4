@@ -17,7 +17,7 @@ if __name__ == '__main__':
     S, n = a, 0
 
     while math.fabs(a) > EPS:
-        a *= (x * (2 * n + 1)) / (2 * (x ** (2 * n)))
+        a *= (- x * (2 * n + 1)) / ((2 * n + 3) * (n + 1))
         S += a
         n += 1
 
