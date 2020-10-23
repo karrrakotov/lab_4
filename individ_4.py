@@ -13,7 +13,7 @@ if __name__ == '__main__':
         print("x - не может быть равен 0", file=sys.stderr)
         exit(1)
 
-    a = -x ** 3 / 3
+    a = x
     S, n = a, 0
 
     while math.fabs(a) > EPS:
